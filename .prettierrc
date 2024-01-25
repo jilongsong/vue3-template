@@ -3,7 +3,11 @@
   "tabWidth": 2,
   "printWidth": 88,
   "singleQuote": true,
-  "trailingComma": "none",
+  "trailingComma":"es5",
   "bracketSpacing": true,
-  "semi": false
+  "semi": true,
+  "endOfLine":"lf",
+  "arrowParens":"always",
+  "vueIndentScriptAndStyle":false,
+  "vueIndentHTML":false
 }

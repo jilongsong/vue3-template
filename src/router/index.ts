@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory, Router, RouteRecordRaw } from 'vue-router'
-import Home from '@/layout/index.vue'
+import { createRouter, createWebHashHistory, Router, RouteRecordRaw } from 'vue-router';
+import Home from '@/layout/index.vue';
 
 const routes: Array<RouteRecordRaw> = [
 	{
@@ -7,30 +7,30 @@ const routes: Array<RouteRecordRaw> = [
 		name: 'Home',
 		component: Home,
 		meta: {
-			title: 'home'
-		}
+			title: 'home',
+		},
 	},
 	{
 		path: '/404',
 		name: '404',
 		component: () => import('../views/404/index.vue'),
 		meta: {
-			title: '404'
-		}
+			title: '404',
+		},
 	},
 	{
 		path: '/:pathMatch(.*)*',
 		redirect: '/404',
 		name: 'any',
 		meta: {
-			title: '404'
-		}
-	}
-]
+			title: '404',
+		},
+	},
+];
 
 const router: Router = createRouter({
 	history: createWebHashHistory(),
-	routes
-})
+	routes,
+});
 
-export default router
+export default router;

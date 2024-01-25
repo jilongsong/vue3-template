@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const homeref = ref('xxxxxxx')
+const homeref = ref('xxxxxxx');
 </script>
 <template>
 	<div>

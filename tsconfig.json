@@ -1,26 +1,33 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"moduleResolution": "node",
-		"strict": true,
-		"jsx": "preserve",
-		"sourceMap": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"lib": ["esnext", "dom"],
-		"types": ["vite/client"],
-		"baseUrl": "src",
-		"paths": {
-			"@/*": ["./*"]
-		}
+	  "target": "ESNext",
+	  "module": "ESNext",
+	  "strict": true,
+	  "jsx": "preserve",
+	  "moduleResolution": "Node",
+	  "skipLibCheck": true,
+	  "esModuleInterop": true,
+	  "allowSyntheticDefaultImports": true,
+	  "importHelpers": true,
+	  "experimentalDecorators": true,
+	  "emitDecoratorMetadata": true,
+	  "resolveJsonModule": true,
+	  "sourceMap": true,
+	  "useDefineForClassFields": true,
+	  "baseUrl": ".",
+	  "lib": ["ESNext", "DOM"],
+	  "paths": {
+		// 内部模块都指向 src/index.ts, 会有更好的代码跳转体验.
+		"@*": ["./src"],
+	  },
+	  "types": [
+		"node",
+		"vite/client",
+	  ],
 	},
-	"include": [
-		"src/**/*.ts",
-		"src/**/*.d.ts",
-		"src/**/*.tsx",
-		"src/**/*.vue",
-		"./.eslintrc.js",
-		"./auto-imports.d.ts"
-	]
-}
+	"exclude": [
+	  "**/dist/**/*",
+	  "**/node_modules/**/*",
+	],
+  }
+  

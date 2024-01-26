@@ -10,7 +10,8 @@
 - 代码规范：[EditorConfig](http://editorconfig.org) + [Prettier](https://prettier.io/) + [ESLint](https://eslint.org/) + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#translation)
 - 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
 - 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
-
+- 按需引入UI组件库：[unplugin-auto-import]()
+- 自动导入vue Hook：[unplugin-vue-components]()
 ### 安装依赖
 
 ```sh

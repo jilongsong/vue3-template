@@ -38,7 +38,7 @@ module.exports = defineConfig({
     'no-control-regex': ['off'],
 
     // typeScript (https://typescript-eslint.io/rules)
-    '@typescript-eslint/no-unused-vars': ['error'], // 未使用变量检查
+    '@typescript-eslint/no-unused-vars': ['warn'], // 未使用变量检查
     '@typescript-eslint/class-literal-property-style': ['error', 'getters'], // 只读字面量风格检查
     '@typescript-eslint/no-empty-function': ['off'], // 禁止使用空方法
     '@typescript-eslint/no-require-imports': ['off'],

@@ -18,7 +18,7 @@
 	  "lib": ["ESNext", "DOM"],
 	  "paths": {
 		// 内部模块都指向 src/index.ts, 会有更好的代码跳转体验.
-		"@*": ["./src"],
+		"@/*": ["./src/*"],
 	  },
 	  "types": [
 		"node",
@@ -29,5 +29,6 @@
 	  "**/dist/**/*",
 	  "**/node_modules/**/*",
 	],
+	"include": ["env.d.ts", "src/**/*", "src/**/*.vue", "test/**/*.ts", "vite.config.ts"],
   }
   

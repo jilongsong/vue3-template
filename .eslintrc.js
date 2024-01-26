@@ -14,7 +14,7 @@ module.exports = defineConfig({
     beforeEach: true,
     NodeJS: true,
   },
-  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', 'plugin:prettier/recommended','./.eslintrc-auto-import.json'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 12,

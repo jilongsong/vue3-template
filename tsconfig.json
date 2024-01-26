@@ -28,7 +28,8 @@
 	"exclude": [
 	  "**/dist/**/*",
 	  "**/node_modules/**/*",
+	  "auto-imports.d.ts"
 	],
-	"include": ["env.d.ts", "src/**/*", "src/**/*.vue", "test/**/*.ts", "vite.config.ts"],
+	"include": ["env.d.ts", "src/**/*", "src/**/*.vue", "test/**/*.ts", "vite.config.ts","components.d.ts"],
   }
   

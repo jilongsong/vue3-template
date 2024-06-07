@@ -50,4 +50,10 @@
   #root, #__next {
     isolation: isolate;
   }
-  
+ 
+  :root {
+    --primary-color: #721fbd; /* 主要颜色 */
+    --secondary-color: #6c757d; /* 次要颜色 */
+    --background-color: #f8f9fa; /* 背景颜色 */
+    /* 添加更多颜色变量... */
+  }

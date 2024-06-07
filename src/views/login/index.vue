@@ -50,7 +50,7 @@ import useAccountStore from '@/store/account';
 
 const accountStore = useAccountStore();
 
-const isSignedIn = ref(false);
+const isSignedIn = ref(true);
 
 //登录
 const signInForm = ref({
@@ -59,7 +59,7 @@ const signInForm = ref({
 });
 
 const signIn = async () => {
-  accountStore.login(signInForm.value);
+  await accountStore.login(signInForm.value);
 };
 
 //注册

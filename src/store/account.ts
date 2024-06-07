@@ -29,9 +29,13 @@ const useAccountStore = defineStore('account', {
     async login({ username, password }: LoginRequest) {
       try {
         const response = await login({ username, password });
-        this.username = response.username;
-        this.token = response.token;
-        console.log('success');
+        console.log(response);
+        // this.username = response.username;
+        if (response.code === 200 && response.token) {
+          console.log('response');
+          this.token = response.token;
+          router.push('/home');
+        }
       } catch {
         console.log('error');
       }

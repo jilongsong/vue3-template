@@ -1,6 +1,6 @@
 <template>
   <div class="calendar">
-    <div class="day-and-activity activity-one">
+    <div v-for="i in 4" :key="i" :class="['day-and-activity', 'activity-' + i]">
       <div class="day">
         <h1>13</h1>
         <p>mon</p>
@@ -32,94 +32,6 @@
       </div>
       <button class="btn">已完成</button>
     </div>
-
-    <div class="day-and-activity activity-two">
-      <div class="day">
-        <h1>15</h1>
-        <p>wed</p>
-      </div>
-      <div class="activity">
-        <h2>Yoga</h2>
-        <div class="participants">
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c61daa1c-5881-43f8-a50f-62be3d235daf"
-            style="--i: 1"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/32037044-f076-433a-8a6e-9b80842f29c9"
-            style="--i: 2"
-            alt=""
-          />
-        </div>
-      </div>
-      <button class="btn">已完成</button>
-    </div>
-
-    <div class="day-and-activity activity-three">
-      <div class="day">
-        <h1>17</h1>
-        <p>fri</p>
-      </div>
-      <div class="activity">
-        <h2>Tennis</h2>
-        <div class="participants">
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/32037044-f076-433a-8a6e-9b80842f29c9"
-            style="--i: 1"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e082b965-bb88-4192-bce6-0eb8b0bf8e68"
-            style="--i: 2"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c61daa1c-5881-43f8-a50f-62be3d235daf"
-            style="--i: 3"
-            alt=""
-          />
-        </div>
-      </div>
-      <button class="btn">已完成</button>
-    </div>
-
-    <div class="day-and-activity activity-four">
-      <div class="day">
-        <h1>18</h1>
-        <p>sat</p>
-      </div>
-      <div class="activity">
-        <h2>Hiking</h2>
-        <div class="participants">
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/07d4fa6f-6559-4874-b912-3968fdfe4e5e"
-            style="--i: 1"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/32037044-f076-433a-8a6e-9b80842f29c9"
-            style="--i: 2"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/07d4fa6f-6559-4874-b912-3968fdfe4e5e"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c61daa1c-5881-43f8-a50f-62be3d235daf"
-            style="--i: 4"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/90affa88-8da0-40c8-abe7-f77ea355a9de"
-            style="--i: 5"
-            alt=""
-          />
-        </div>
-      </div>
-      <button class="btn">已完成</button>
-    </div>
   </div>
 </template>
 
@@ -128,8 +40,10 @@
 <style scoped lang="scss">
 .calendar {
   margin-top: 10px;
-  height: 400px;
   overflow-y: scroll;
+}
+.calendar ::-webkit-scrollbar {
+  width: 0 !important;
 }
 
 .day-and-activity {
@@ -143,22 +57,22 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
 }
 
-.activity-one {
+.activity-1 {
   background-color: rgb(124, 136, 224, 0.5);
   background-image: linear-gradient(240deg, rgb(124, 136, 224) 0%, #c3f4fc 100%);
 }
 
-.activity-two {
+.activity-2 {
   background-color: #aee2a4a1;
   background-image: linear-gradient(240deg, #e5a243ab 0%, #f7f7aa 90%);
 }
 
-.activity-three {
+.activity-3 {
   background-color: #ecfcc376;
   background-image: linear-gradient(240deg, #97e7d1 0%, #ecfcc3 100%);
 }
 
-.activity-four {
+.activity-4 {
   background-color: #e6a7c3b5;
   background-image: linear-gradient(240deg, #fc8ebe 0%, #fce5c3 100%);
 }
@@ -167,7 +81,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-10px);
 }
 
 .day h1 {

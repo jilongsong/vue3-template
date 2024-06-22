@@ -11,14 +11,24 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '/home',
-        name: 'Application',
+        name: 'home',
         component: () => import('@/views/home/index.vue'),
+      },
+      {
+        path: '/collection',
+        name: 'collection',
+        component: () => import('@/views/collection/index.vue'),
+      },
+      {
+        path: '/board',
+        name: 'board',
+        component: () => import('@/views/board/index.vue'),
       },
     ],
   },
   {
     path: '/login',
-    name: 'Login',
+    name: 'login',
     component: () => import('@/views/login/index.vue'),
   },
   {
@@ -42,6 +52,24 @@ const routes: Array<RouteRecordRaw> = [
 const router: Router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  // 检查本地存储中是否存在 csrf-token，表示用户已登录
+  const csrfToken = localStorage.getItem('csrf-token');
+
+  // 如果用户已登录且要前往的不是登录页，则允许导航
+  if (csrfToken && to.path !== '/login') {
+    next();
+  } else if (csrfToken && to.path === '/login') {
+    next('/home');
+  } else if (!csrfToken && to.path !== '/login') {
+    next('/login');
+  }
+  // 其他情况，允许导航
+  else {
+    next();
+  }
 });
 
 export default router;

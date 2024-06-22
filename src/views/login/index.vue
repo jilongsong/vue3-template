@@ -45,9 +45,13 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import { ElMessage } from 'element-plus';
+
 import { register } from '@/api/account';
 import useAccountStore from '@/store/account';
 
+const router = useRouter();
 const accountStore = useAccountStore();
 
 const isSignedIn = ref(true);
@@ -59,7 +63,13 @@ const signInForm = ref({
 });
 
 const signIn = async () => {
-  await accountStore.login(signInForm.value);
+  const result = await accountStore.login(signInForm.value);
+  if (result.code === 200) {
+    ElMessage.success(result.message);
+    router.replace('/home');
+  } else {
+    ElMessage.warning(result.message);
+  }
 };
 
 //注册
@@ -69,8 +79,13 @@ const signUpForm = ref({
 });
 
 const signUp = async () => {
-  const request = await register(signUpForm.value);
-  console.log('注册成功', request);
+  const result = await register(signUpForm.value);
+  if (result.code === 200) {
+    ElMessage.success(result.message);
+    isSignedIn.value = true;
+  } else {
+    ElMessage.warning(result.message);
+  }
 };
 </script>
 

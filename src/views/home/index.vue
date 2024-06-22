@@ -1,263 +1,239 @@
 <template>
   <div class="home-page">
-    <main>
-      <nav class="main-menu">
-        <h1>Fitness App</h1>
-        <img
-          class="logo"
-          src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4cfdcb5a-0137-4457-8be1-6e7bd1f29ebb"
-          alt=""
-        />
-        <ul>
-          <li class="nav-item active">
-            <b></b>
-            <b></b>
-            <a href="#">
-              <i class="fa fa-house nav-icon"></i>
-              <span class="nav-text">Home</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <b></b>
-            <b></b>
-            <a href="#">
-              <i class="fa fa-user nav-icon"></i>
-              <span class="nav-text">Profile</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <b></b>
-            <b></b>
-            <a href="#">
-              <i class="fa fa-calendar-check nav-icon"></i>
-              <span class="nav-text">Schedule</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <b></b>
-            <b></b>
-            <a href="#">
-              <i class="fa fa-person-running nav-icon"></i>
-              <span class="nav-text">Activities</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <b></b>
-            <b></b>
-            <a href="#">
-              <i class="fa fa-sliders nav-icon"></i>
-              <span class="nav-text">Settings</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <section class="content">
-        <div class="left-content">
-          <div class="activities">
-            <h1>Popular Activities</h1>
-            <div class="activity-container">
-              <div class="image-container img-one">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/467cf682-03fb-4fae-b129-5d4f5db304dd"
-                  alt="tennis"
-                />
-                <div class="overlay">
-                  <h3>Tennis</h3>
-                </div>
-              </div>
-
-              <div class="image-container img-two">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/3bab6a71-c842-4a50-9fed-b4ce650cb478"
-                  alt="hiking"
-                />
-                <div class="overlay">
-                  <h3>Hiking</h3>
-                </div>
-              </div>
-
-              <div class="image-container img-three">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c8e88356-8df5-4ac5-9e1f-5b9e99685021"
-                  alt="running"
-                />
-                <div class="overlay">
-                  <h3>Running</h3>
-                </div>
-              </div>
-
-              <div class="image-container img-four">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/69437d08-f203-4905-8cf5-05411cc28c19"
-                  alt="cycling"
-                />
-                <div class="overlay">
-                  <h3>Cycling</h3>
-                </div>
-              </div>
-
-              <div class="image-container img-five">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e1a66078-1927-4828-b793-15c403d06411"
-                  alt="yoga"
-                />
-                <div class="overlay">
-                  <h3>Yoga</h3>
-                </div>
-              </div>
-
-              <div class="image-container img-six">
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7568e0ff-edb5-43dd-bff5-aed405fc32d9"
-                  alt="swimming"
-                />
-                <div class="overlay">
-                  <h3>Swimming</h3>
-                </div>
+    <section class="content">
+      <div class="left-content">
+        <div class="activities">
+          <h1>Hobby</h1>
+          <div class="activity-container">
+            <div class="image-container img-one">
+              <img src="../../assets/01.jpg" alt="tennis" />
+              <div class="overlay">
+                <h3>Sing</h3>
               </div>
             </div>
-          </div>
 
-          <div class="left-bottom">
-            <div class="weekly-schedule">
-              <h1>Weekly Schedule</h1>
-              <TodoList />
+            <div class="image-container img-two">
+              <img src="../../assets/07.jpg" alt="hiking" />
+              <div class="overlay">
+                <h3>Dance</h3>
+              </div>
             </div>
 
-            <div class="personal-bests">
-              <h1>Personal Bests</h1>
-              <div class="personal-bests-container">
-                <div class="best-item box-one">
-                  <p>Fastest 5K Run: 22min</p>
-                  <img
-                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/242bbd8c-aaf8-4aee-a3e4-e0df62d1ab27"
-                    alt=""
-                  />
-                </div>
-                <div class="best-item box-two">
-                  <p>Longest Distance Cycling: 4 miles</p>
-                  <img
-                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/a3b3cb3a-5127-498b-91cc-a1d39499164a"
-                    alt=""
-                  />
-                </div>
-                <div class="best-item box-three">
-                  <p>Longest Roller-Skating: 2 hours</p>
-                  <img
-                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e0ee8ffb-faa8-462a-b44d-0a18c1d9604c"
-                    alt=""
-                  />
-                </div>
+            <div class="image-container img-three">
+              <img src="../../assets/06.jpeg" alt="running" />
+              <div class="overlay">
+                <h3>Running</h3>
+              </div>
+            </div>
+
+            <div class="image-container img-four">
+              <img src="../../assets/02.jpg" alt="cycling" />
+              <div class="overlay">
+                <h3>Cycling</h3>
+              </div>
+            </div>
+
+            <div class="image-container img-five">
+              <img src="../../assets/03.jpeg" alt="yoga" />
+              <div class="overlay">
+                <h3>Yoga</h3>
+              </div>
+            </div>
+
+            <div class="image-container img-six">
+              <img src="../../assets/08.jpeg" alt="swimming" />
+              <div class="overlay">
+                <h3>Swimming</h3>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="right-content">
-          <div class="user-info">
-            <div class="icon-container">
-              <i class="fa fa-bell nav-icon"></i>
-              <i class="fa fa-message nav-icon"></i>
+        <div class="left-bottom">
+          <div class="weekly-schedule">
+            <div class="add-todo">
+              <h1>Memorandum</h1>
+              <el-input
+                v-model="todoValue"
+                style="margin-top: 20px"
+                placeholder="Add a new task"
+                @keyup.enter="addTodo"
+              />
             </div>
-            <h4>Kelsey Miller</h4>
-            <img
-              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/40b7cce2-c289-4954-9be0-938479832a9c"
-              alt="user"
-            />
+
+            <TodoList :todo-list="todoList" @solved-item="deleteTodo" />
           </div>
 
-          <div class="active-calories">
-            <h1 style="align-self: flex-start">Active Calories</h1>
-            <div class="active-calories-container">
-              <div class="box" style="--i: 85%">
-                <div class="circle">
-                  <h2>85<small>%</small></h2>
-                </div>
-              </div>
-              <div class="calories-content">
-                <p><span>Today:</span> 400</p>
-                <p><span>This Week:</span> 3500</p>
-                <p><span>This Month:</span> 14000</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mobile-personal-bests">
+          <div class="personal-bests">
             <h1>Personal Bests</h1>
             <div class="personal-bests-container">
               <div class="best-item box-one">
                 <p>Fastest 5K Run: 22min</p>
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/05dfc444-9ed3-44cc-96af-a9cf195f5820"
-                  alt=""
-                />
+                <img src="../../assets/11.png" alt="" />
               </div>
               <div class="best-item box-two">
                 <p>Longest Distance Cycling: 4 miles</p>
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9ca170e9-1252-4fa6-8677-36493540c1f2"
-                  alt=""
-                />
+                <img src="../../assets/12.png" alt="" />
               </div>
               <div class="best-item box-three">
                 <p>Longest Roller-Skating: 2 hours</p>
-                <img
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/262d1611-ed4c-4297-981c-480cf7f95714"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="friends-activity">
-            <h1>Friends Activity</h1>
-            <div class="card-container">
-              <div class="card">
-                <div class="card-user-info">
-                  <img
-                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/9290037d-a5b2-4f50-aea3-9f3f2b53b441"
-                    alt=""
-                  />
-                  <h2>Jane</h2>
-                </div>
-                <img
-                  class="card-img"
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/bef54506-ea45-4e42-a1b6-23a48f61c5e8"
-                  alt=""
-                />
-                <p>We completed the 30-Day Running Streak Challenge!🏃‍♀️🎉</p>
-              </div>
-
-              <div class="card card-two">
-                <div class="card-user-info">
-                  <img
-                    src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/42616ef2-ba96-49c7-80ea-c3cf1e2ecc89"
-                    alt=""
-                  />
-                  <h2>Mike</h2>
-                </div>
-                <img
-                  class="card-img"
-                  src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/2dcc1b94-06c5-4c62-b886-53b9e433fd44"
-                  alt=""
-                />
-                <p>I just set a new record in cycling: 30 miles!💪</p>
+                <img src="../../assets/13.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+
+      <div class="right-content">
+        <div class="user-info">
+          <div class="icon-container">
+            <i class="fa fa-bell nav-icon"></i>
+            <i class="fa fa-message nav-icon"></i>
+          </div>
+          <h4>Jennie Kim</h4>
+          <el-dropdown>
+            <img src="../../assets/05.jpeg" alt="user" />
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item @click="loginOut">Login Out</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+        </div>
+
+        <div class="active-calories">
+          <h1 style="align-self: flex-start">Active Calories</h1>
+          <div class="active-calories-container">
+            <div class="box" style="--i: 85%">
+              <div class="circle">
+                <h2>85<small>%</small></h2>
+              </div>
+            </div>
+            <div class="calories-content">
+              <p><span>Today:</span> 400</p>
+              <p><span>This Week:</span> 3500</p>
+              <p><span>This Month:</span> 14000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-personal-bests">
+          <h1>Personal Bests</h1>
+          <div class="personal-bests-container">
+            <div class="best-item box-one">
+              <p>Fastest 5K Run: 22min</p>
+              <img src="../../assets/b-1.jpeg" alt="" />
+            </div>
+            <div class="best-item box-two">
+              <p>Longest Distance Cycling: 4 miles</p>
+              <img src="../../assets/b-1.jpeg" alt="" />
+            </div>
+            <div class="best-item box-three">
+              <p>Longest Roller-Skating: 2 hours</p>
+              <img src="../../assets/b-1.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="friends-activity">
+          <h1>Friends Activity</h1>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-user-info">
+                <img src="../../assets/05.jpeg" alt="" />
+                <h2>Jennie Kim</h2>
+              </div>
+              <img class="card-img" src="../../assets/b-1.jpg" alt="" />
+              <p>We completed the 30-Day Running Streak Challenge!🏃‍♀️🎉</p>
+            </div>
+
+            <div class="card card-two">
+              <div class="card-user-info">
+                <img src="../../assets/05.jpeg" alt="" />
+                <h2>Jennie Kim</h2>
+              </div>
+              <img class="card-img" src="../../assets/b-2.jpg" alt="" />
+              <p>I just set a new record in cycling: 30 miles!💪</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+import dayjs from 'dayjs';
+
+import useAccountStore from '@/store/account';
+
 import TodoList from './components/TodoList.vue';
+
+const accountStore = useAccountStore();
+const router = useRouter();
+
+const monthMap: any = {
+  1: 'January',
+  2: 'February',
+  3: 'March',
+  4: 'April',
+  5: 'May',
+  6: 'June',
+  7: 'July',
+  8: 'August',
+  9: 'September',
+  10: 'October',
+  11: 'November',
+  12: 'December',
+};
+
+const todoValue = ref('');
+const todoList = ref<any[]>(
+  localStorage.getItem('todoList')
+    ? JSON.parse(localStorage.getItem('todoList') as string)
+    : [
+        {
+          day: dayjs().date(),
+          month: monthMap[dayjs().month()],
+          text: '这是一条备忘录',
+        },
+        {
+          day: dayjs().date(),
+          month: monthMap[dayjs().month()],
+          text: '这是一条备忘录',
+        },
+        {
+          day: dayjs().date(),
+          month: monthMap[dayjs().month()],
+          text: '这是一条备忘录',
+        },
+      ]
+);
+
+const addTodo = () => {
+  if (todoValue.value) {
+    const currentDate = new Date();
+    todoList.value.push({
+      day: dayjs().date(),
+      month: monthMap[currentDate.getMonth()],
+      text: todoValue.value,
+      completed: false,
+    });
+    localStorage.setItem('todoList', JSON.stringify(todoList.value));
+    todoValue.value = '';
+  }
+};
+
+const deleteTodo = (index: number) => {
+  todoList.value.splice(index, 1);
+  localStorage.setItem('todoList', JSON.stringify(todoList.value));
+};
+
+const loginOut = () => {
+  accountStore.logout();
+  router.push('/login');
+};
 </script>
 
 <style scoped lang="scss">
@@ -282,25 +258,8 @@ nav ul li a {
 
 .home-page {
   font-family: 'Nunito', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
-}
-
-/* MAIN MENU */
-
-main {
-  display: grid;
-  grid-template-columns: 13% 87%;
-  width: 100%;
-  margin: 10px;
-  background: rgb(254, 254, 254);
-  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) inset,
-    0 4px 16px rgba(0, 0, 0, 0.12);
-  border-radius: 15px;
-  z-index: 10;
 }
 
 .main-menu {
@@ -525,6 +484,13 @@ main {
   margin-top: 20px;
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
 }
 
 .calendar {

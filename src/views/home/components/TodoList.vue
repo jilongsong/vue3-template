@@ -1,49 +1,36 @@
 <template>
   <div class="calendar">
-    <div v-for="i in 4" :key="i" :class="['day-and-activity', 'activity-' + i]">
+    <div v-for="(todo, i) in todoList" :key="todo.text" :class="['day-and-activity', 'activity-' + ((i + 1) % 4)]">
       <div class="day">
-        <h1>13</h1>
-        <p>mon</p>
+        <h1>{{ todo.day }}</h1>
+        <p>{{ todo.month }}</p>
       </div>
       <div class="activity">
-        <h2>Swimming</h2>
-        <div class="participants">
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c61daa1c-5881-43f8-a50f-62be3d235daf"
-            style="--i: 1"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/90affa88-8da0-40c8-abe7-f77ea355a9de"
-            style="--i: 2"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/07d4fa6f-6559-4874-b912-3968fdfe4e5e"
-            style="--i: 3"
-            alt=""
-          />
-          <img
-            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e082b965-bb88-4192-bce6-0eb8b0bf8e68"
-            style="--i: 4"
-            alt=""
-          />
-        </div>
+        <h2>{{ todo.text }}</h2>
       </div>
-      <button class="btn">已完成</button>
+      <button class="btn" @click="solvedItem(i)">solved</button>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineProps<{
+  todoList: any[];
+}>();
+
+const emit = defineEmits<(event: 'solved-item', data: number) => void>();
+const solvedItem = (index: number) => {
+  emit('solved-item', index);
+};
+</script>
 
 <style scoped lang="scss">
 .calendar {
   margin-top: 10px;
+  height: 320px;
   overflow-y: scroll;
-}
-.calendar ::-webkit-scrollbar {
-  width: 0 !important;
+  -webkit-scrollbar: none;
+  scrollbar-width: none;
 }
 
 .day-and-activity {
@@ -55,24 +42,28 @@
   padding: 8px;
   color: #484d53;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px;
+  h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
-.activity-1 {
+.activity-0 {
   background-color: rgb(124, 136, 224, 0.5);
   background-image: linear-gradient(240deg, rgb(124, 136, 224) 0%, #c3f4fc 100%);
 }
 
-.activity-2 {
+.activity-1 {
   background-color: #aee2a4a1;
   background-image: linear-gradient(240deg, #e5a243ab 0%, #f7f7aa 90%);
 }
 
-.activity-3 {
+.activity-2 {
   background-color: #ecfcc376;
   background-image: linear-gradient(240deg, #97e7d1 0%, #ecfcc3 100%);
 }
 
-.activity-4 {
+.activity-3 {
   background-color: #e6a7c3b5;
   background-image: linear-gradient(240deg, #fc8ebe 0%, #fce5c3 100%);
 }
@@ -97,6 +88,14 @@
 
 .activity {
   border-left: 3px solid #484d53;
+}
+
+.activity h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .participants {

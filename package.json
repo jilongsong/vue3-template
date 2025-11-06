@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
+    "@siact/ai-chatbot-bridge": "^0.0.7",
+    "@siact/ai-chatbot-x-vue": "^0.0.5",
     "@vueuse/core": "^10.7.2",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",

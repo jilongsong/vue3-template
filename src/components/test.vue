@@ -11,7 +11,7 @@ const addMessage = () => {
 };
 
 aiChatbotX.registerCommand({
-  name: 'openModel',
+  name: 'openQualityManagement',
   description: '打开质量管理页面',
   handler: () => {
     // 在此放置业务逻辑，例如更新状态机或触发语音播报

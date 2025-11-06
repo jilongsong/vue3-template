@@ -12,10 +12,10 @@ const addMessage = () => {
 
 aiChatbotX.registerCommand({
   name: 'openModel',
-  description: '打开弹窗',
+  description: '打开质量管理页面',
   handler: () => {
     // 在此放置业务逻辑，例如更新状态机或触发语音播报
-    console.log('打开弹窗');
+    console.log('打开质量管理页面');
     return { success: true };
   },
 });

@@ -10,7 +10,8 @@ const addMessage = () => {
   aiChatbotX.appendMessage('你好');
 };
 
-aiChatbotX.registerCommand({
+setTimeout(() => {
+  aiChatbotX.registerCommand({
   name: 'openQualityManagement',
   description: '打开质量管理页面',
   handler: () => {
@@ -19,6 +20,7 @@ aiChatbotX.registerCommand({
     return { success: true };
   },
 });
+}, 3000);
 
 
 </script>

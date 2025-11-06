@@ -2,7 +2,7 @@
   <div class="dev-app">
     <AiChatbotProvider
       project="sime-agent"
-      chatbotUrl="https://192.100.30.224:8888/"
+      chatbotUrl="https://192.100.30.224:8888/app/2zzlnuo100wokm2p57mui/chat/"
       :allowed-origins="['https://192.100.30.224:8888/']"
     >
       <div class="chatbot-container">

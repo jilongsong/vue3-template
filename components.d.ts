@@ -7,10 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AiChatbotX: typeof import('./src/components/ai-chatbot-X.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Test: typeof import('./src/components/test.vue')['default']
-    VoiceStatus: typeof import('./src/components/voice-status.vue')['default']
   }
 }
